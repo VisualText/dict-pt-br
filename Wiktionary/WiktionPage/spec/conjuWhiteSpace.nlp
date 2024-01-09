@@ -11,7 +11,6 @@
 @POST
 X("up",3) = 1;
 excise(1,1);
-noop();
 
 @RULES
 _xNIL <-

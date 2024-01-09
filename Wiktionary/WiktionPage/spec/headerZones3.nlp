@@ -1,5 +1,5 @@
 ###############################################
-# FILE: headerZones
+# FILE: headerZones3
 # SUBJ: comment
 # AUTH: David de Hilster
 # CREATED: 2022-10-6 19:10:53
@@ -8,8 +8,12 @@
 
 @PATH _ROOT _textZone
 
+@PRE
+<1,1> vareq("level",3);
+
 @POST
 S("header") = N("header",1);
+S("level") = N("level",1);
 single();
 
 @RULES

@@ -22,23 +22,3 @@
 
 @POST X("root",3) = X("root",4); X("meaning",3) = 1;
 @RULES _xNIL <- _root	@@
-
-@POST
-X("stem",3) = N("$text",6);
-X("verb",3) = N("$text",8);
-IncrementCount(G("conjugations"),"count");
-AddUniqueCon(G("conjugations"),N("$text",8));
-single();
-
-@RULES
-_conjug <-
-    _xWILD [match=(\{)]	### (1)
-    conj				### (2)
-    \/					### (3)
-    _xALPHA				### (4)
-    \|					### (5)
-    _xALPHA				### (6)
-    \|					### (7)
-    _xALPHA				### (8)
-    _xWILD [match=(\})]	### (9)
-    @@

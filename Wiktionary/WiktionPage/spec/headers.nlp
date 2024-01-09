@@ -10,9 +10,9 @@
 
 @POST
 S("header") = N("$text",2);
+S("level") = strlength(N("$text",1));
 X("header") = N("$text",2);
 X("up") = 1;
-X("level") = strlength(N("$text",1));
 "header.txt" << N("$text",2) << "\n";
 single();
 

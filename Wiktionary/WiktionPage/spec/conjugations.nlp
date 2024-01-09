@@ -1,0 +1,29 @@
+###############################################
+# FILE: hasMeaning
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-11-7 15:39:40
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _textZone _headerZone _headerZone _LINE
+
+@POST
+X("stem",4) = N("$text",6);
+X("verb",4) = N("$text",8);
+IncrementCount(G("conjugations"),"count");
+AddUniqueCon(G("conjugations"),N("$text",8));
+single();
+
+@RULES
+_conjug <-
+    _xWILD [match=(\{)]	### (1)
+    conj				### (2)
+    \/					### (3)
+    pt					### (4)
+    \|					### (5)
+    _xALPHA				### (6)
+    \|					### (7)
+    _xALPHA				### (8)
+    _xWILD [match=(\})]	### (9)
+    @@

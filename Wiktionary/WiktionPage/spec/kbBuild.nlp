@@ -6,10 +6,12 @@
 # MODIFIED:
 ###############################################
 
-@PATH _ROOT _textZone _languageZone
+@PATH _ROOT _textZone _languageZone _headerZone
 
 @POST
-AddWord(X("word",1),X("language",3),N(1));
+if (strtolower(X("header",4)) == "verbo") {
+	AddVerb(X("word",1),X("language",3),N(1));
+}
 
 @RULES
 _xNIL <-

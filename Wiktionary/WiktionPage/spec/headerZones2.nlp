@@ -1,0 +1,23 @@
+###############################################
+# FILE: headerZones
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-10-6 19:10:53
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _textZone
+
+@PRE
+<1,1> vareq("level",2);
+
+@POST
+S("header") = N("header",1);
+S("level") = N("level",1);
+single();
+
+@RULES
+_headerZone <-
+	_header									### (1)
+	_xWILD [fail=(_header _language _xEND)]	### (2)
+	@@										### (3)

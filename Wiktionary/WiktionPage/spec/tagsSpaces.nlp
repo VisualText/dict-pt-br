@@ -21,12 +21,3 @@ _langStart <-
 	_xWILD [plus match=(\{)]	### (2)
 	\-							### (3)
 	@@
-		
-@RULES
-_startConju <-
-	\{		### (1)
-	\{		### (2)
-	conj	### (3)
-	\.		### (4)
-	_xALPHA	### (5)
-	@@
