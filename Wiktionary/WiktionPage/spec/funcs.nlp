@@ -9,11 +9,9 @@
 @DECL
 
 
-AddVerb(L("word"),L("lang"),L("node")) {
+AddVerbInf(L("word"),L("lang"),L("node")) {
     L("header") = strtolower(pnvar(L("node"),"header"));
     L("pos") = PosStr(L("header"));
-    "add.txt" << L("word") << " " << L("lang") << "\n";
-    "add.txt" << L("header") << "\n";
     if (strtolower(L("header")) == "conjugação") {
         L("verb") = pnvar(L("node"),"verb");
         L("stem") = pnvar(L("node"),"stem");
@@ -33,7 +31,7 @@ AddVerb(L("word"),L("lang"),L("node")) {
         }
     } else {
         # Word with no part of speech
-        G("debug") << L("word") << " " << L("lang") << " <-- No POS\n";
+        G("debug") << L("word") << " " << L("lang") << " <-- AddVerbInf: No POS\n";
     }
 }
 
@@ -42,24 +40,7 @@ AddWord(L("word"),L("lang"),L("node")) {
     L("pos") = PosStr(L("header"));
     "add.txt" << L("word") << " " << L("pos") << "\n";
     "add.txt" << L("header") << "\n";
-    if (L("header") == "conjugação") {
-        L("verb") = pnvar(L("node"),"verb");
-        L("stem") = pnvar(L("node"),"stem");
-        L("verb") = GetVerbEnding(L("stem"),L("verb"));
-        L("stem") = G("GetVerbEnding");
-        "stem.txt" << L("stem") << "\n";
-        if (strstartswith(L("verb"),"c")) {
-            L("stem") = L("stem") + "c";
-            L("verb") = strpiece(L("verb"),1,strlength(L("verb"))-1);
-        }
-        if (L("verb") == "ar") {
-            AddVerbAr(L("stem"));
-        } else if (L("verb") == "er") {
-            AddVerbEr(L("stem"));            
-        } else if (L("verb") == "ir") {
-            AddVerbIr(L("stem"));
-        }
-    } else if (L("pos")) {
+    if (L("pos")) {
         L("con") = AddUniqueCon(G("words"),L("word"));
         L("meaning") = MakeCountCon(L("con"),"meaning");
 

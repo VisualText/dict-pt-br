@@ -1,6 +1,0 @@
-Sequence file is:
-tokenize
-NOHASH rule: _xNIL [] [] <- _xWHITE [1,1 singlet] [] @@
-
-Passes: (tok,nil) (nlp,KBFuncs) (nlp,funcs) (nlp,kbinit) (nlp,RemoveWhiteSpace) (nlp,attrs) (nlp,tags) (nlp,bodyZone) (nlp,bodyTags) (nlp,tds) (nlp,trs) (nlp,otherTags) (nlp,labelTds) (nlp,twoTds) (nlp,trValues) (nlp,kbOut) 
-

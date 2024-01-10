@@ -1,4 +1,0 @@
-NOHASH rule: _xNIL [] [] <- _xWHITE [1,1 singlet] [] @@
-NOHASH rule: _rest [] [] <- _xWILD [1,0 fails=(_headerZone)] [] @@
-NOHASH rule: _xNIL [] [] <- _xALPHA [1,1] [] = [1,1] [] " [1,1] [] _xWILD [0,0 fails=(")] [] " [1,1] [] @@
-NOHASH rule: _xNIL [] [] <- _xSTART [1,1] [] _liOpen [1,1] [] _hiGroup [1,1] [] @@

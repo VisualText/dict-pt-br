@@ -6,15 +6,19 @@
 # MODIFIED:
 ###############################################
 
-@PATH _ROOT _textZone _languageZone _headerZone
+@PATH _ROOT _textZone _languageZone
 
 @POST
-L("header") = strtolower(X("header",4));
+L("header") = strtolower(N("header",1));
 L("lang") = strtolower(X("language",3));
 "build.txt" << L("header") << "\n";
 if (L("lang") == "pt") {
-	if (L("header") == "verbo") {
-		AddVerbInf(X("word",1),L("lang"),N(1));
+	if (L("header") == "forma verbal" 
+		|| strcontains("substantivo",L("header"))
+		|| strcontains("pronome",L("header"))
+		) {
+
+		AddWord(X("word",1),X("language",3),N(1));
 	}
 }
 

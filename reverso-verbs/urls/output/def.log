@@ -1,6 +1,0 @@
-Sequence file is:
-tokenize
-NOHASH rule: _xNIL [] [] <- _xWHITE [1,1 singlet] [] @@
-
-Passes: (tok,nil) (nlp,RemoveWhiteSpace) (nlp,anchor) 
-
