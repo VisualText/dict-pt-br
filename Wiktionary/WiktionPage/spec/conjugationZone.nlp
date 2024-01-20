@@ -1,0 +1,20 @@
+###############################################
+# FILE: conjugationZone
+# SUBJ: comment
+# AUTH: Eduardo Costa
+# CREATED: 2024-1-19 19:57:9
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _textZone _headerZone _headerZone
+
+@PRE
+<1,1> vareq("header","Conjugação")
+
+@RULES
+_conjugZone <-
+	_header
+	_LINE
+	_LINE [star]
+	_xWILD [fail= (_header)]
+	@@

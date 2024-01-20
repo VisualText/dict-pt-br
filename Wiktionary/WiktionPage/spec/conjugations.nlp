@@ -6,7 +6,7 @@
 # MODIFIED:
 ###############################################
 
-@PATH _ROOT _textZone _headerZone _headerZone _LINE
+@PATH _ROOT _textZone _headerZone _headerZone _conjugZone _LINE
 
 @POST
 X("stem",4) = N("$text",6);
