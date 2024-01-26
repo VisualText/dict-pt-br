@@ -2,22 +2,22 @@
 
 | Abbreviation      | Meaning  |
 | :---------------- | :------  |
-| Prs.              | Presente   |
-| Prt. Impf.        | Pretérito Imperfeito   |
-| Prt. Pf.          | Pretérito Perfeito   |
-| Prt. MsqPf.       | Pretérito Mais-que-perfeito   |
-| F. Prt.           | Futuro do Pretérito   |
-| F. Prs.           | Futuro do Presente   |
-| Prs. Subj.        | Presente do Subjuntivo   |
-| Prt. ImPf. Subj.  | Pretérito Imperfeito do Subjuntivo   |
-| F. Subj.          | Futuro do Subjuntivo   |
-| S                 | Singular   |
-| P                 | Plural   |
+| p              | Presente   |
+| pi        | Pretérito Imperfeito   |
+| pp          | Pretérito Perfeito   |
+| pmp       | Pretérito Mais-que-perfeito   |
+| fpt           | Futuro do Pretérito   |
+| fps           | Futuro do Presente   |
+| ps        | Presente do Subjuntivo   |
+| pis  | Pretérito Imperfeito do Subjuntivo   |
+| fs          | Futuro do Subjuntivo   |
+| s                 | Singular   |
+| p                 | Plural   |
 | 1                 | Primeira Pessoa   |
 | 2                 | Segunda Pessoa   |
 | 3                 | Terceira Pessoa   |
 | v                 | Verbo   |
-| sub               | Substantivo   |
+| s               | Substantivo   |
 | adj               | Adjetivo   |
 | adv               | Advérbio   |
 | pro               | Pronome   |
