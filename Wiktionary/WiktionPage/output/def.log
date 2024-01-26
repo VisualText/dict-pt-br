@@ -1,12 +1,0 @@
-Sequence file is:
-tokenize
-NOHASH rule: _zap [] [] <- _xWILD [1,0 fails=(_word _textZone)] [] @@
-NOHASH rule: _LINE [] [] <- _xWILD [0,0 fails=( 
-)] [] _xWILD [1,1 matches=(
- _xEND)] [] @@
-NOHASH rule: _xNIL [] [] <- _xWHITE [1,1 singlet] [] @@
-NOHASH rule: _xNIL [] [] <- _xWHITE [1,1 singlet] [] @@
-NOHASH rule: _xNIL [] [] <- _xSTART [1,1] [] : [0,1] [] # [1,1] [] @@
-
-Passes: (tok,nil) (nlp,kbInit) (nlp,KBFuncs) (nlp,tagsSpaces) (nlp,funcs) (nlp,tagsSpacesTwo) (nlp,removes) (nlp,tags) (nlp,textZone) (nlp,notText) (nlp,onlyText) (nlp,Lines) (nlp,RemoveWhiteSpace) (nlp,conjuWhiteSpace) (nlp,words) (nlp,phrases) (nlp,list) (nlp,headers) (nlp,ups) (nlp,headerZones4) (nlp,headerZones3) (nlp,headerZones2) (nlp,attributes) (nlp,conjugations) (nlp,languageZone) (nlp,kbBuild) (nlp,kbBuild2) (nlp,output) 
-
