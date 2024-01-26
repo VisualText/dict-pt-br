@@ -1,0 +1,4 @@
+Conjugations: 0
+brincar pt <-- AddVerbInf: No POS
+brincar pt <-- AddVerbInf: No POS
+Conjugations: 0

@@ -3,7 +3,7 @@
         {
             "name": "Analyzer",
             "type": "state",
-            "currentAnalyzer": "c:\\git\\dict-pt-br\\diction"
+            "currentAnalyzer": "c:\\Users\\Konath\\Desktop\\NLP++\\fork\\dict-pt-br\\Wiktionary\\WiktionPage"
         }
     ]
 }
