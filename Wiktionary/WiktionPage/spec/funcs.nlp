@@ -35,6 +35,196 @@ AddVerbInf(L("word"),L("lang"),L("node")) {
     }
 }
 
+# ************************************************************
+# Creates dictionary entries based on the wikitionary
+# predefinition for the conjugation of irregular
+# verbs in portuguese: 
+# https://pt.wiktionary.org/wiki/Predefini%C3%A7%C3%A3o:conj.pt
+# ************************************************************
+AddVerbIrreg(L("root"),L("lang"),L("node")) {
+    L("index") = 4;
+    L("max_forms") = 57;
+    L("forms") = pnvar(L("node"),"verb_form_array");
+    while(L("index") <= L("max_forms")) {
+        AddConjugationIrreg(L("forms")[L("index")],L("root"),L("index"));
+        ++L("index");
+    }
+}
+
+AddConjugationIrreg(L("word"),L("root"),L("index")) {
+
+    if(L("index") == 4) {
+        AddWordIrregPredef(L("word"),L("root"),"1","s","presente");
+    }
+    else if(L("index") == 5) {
+        AddWordIrregPredef(L("word"),L("root"),"2","s","presente");
+    }
+    else if(L("index") == 6) {
+        AddWordIrregPredef(L("word"),L("root"),"3","s","presente");
+    }
+    else if(L("index") == 7) {
+        AddWordIrregPredef(L("word"),L("root"),"1","p","presente");
+    }
+    else if(L("index") == 8) {
+        AddWordIrregPredef(L("word"),L("root"),"2","p","presente");
+    }
+    else if(L("index") == 9) {
+        AddWordIrregPredef(L("word"),L("root"),"3","p","presente");
+    }
+
+    else if(L("index") == 10) {
+        AddWordIrregPredef(L("word"),L("root"),"1","s","pretérito imperfeito");
+    }
+    else if(L("index") == 11) {
+        AddWordIrregPredef(L("word"),L("root"),"2","s","pretérito imperfeito");
+    }
+    else if(L("index") == 12) {
+        AddWordIrregPredef(L("word"),L("root"),"3","s","pretérito imperfeito");
+    }
+    else if(L("index") == 13) {
+        AddWordIrregPredef(L("word"),L("root"),"1","p","pretérito imperfeito");
+    }
+    else if(L("index") == 14) {
+        AddWordIrregPredef(L("word"),L("root"),"2","p","pretérito imperfeito");
+    }
+    else if(L("index") == 15) {
+        AddWordIrregPredef(L("word"),L("root"),"3","p","pretérito imperfeito");
+    }
+
+    else if(L("index") == 16) {
+        AddWordIrregPredef(L("word"),L("root"),"1","s","pretérito perfeito");
+    }
+    else if(L("index") == 17) {
+        AddWordIrregPredef(L("word"),L("root"),"2","s","pretérito perfeito");
+    }
+    else if(L("index") == 18) {
+        AddWordIrregPredef(L("word"),L("root"),"3","s","pretérito perfeito");
+    }
+    else if(L("index") == 19) {
+        AddWordIrregPredef(L("word"),L("root"),"1","p","pretérito perfeito");
+    }
+    else if(L("index") == 20) {
+        AddWordIrregPredef(L("word"),L("root"),"2","p","pretérito perfeito");
+    }
+    else if(L("index") == 21) {
+        AddWordIrregPredef(L("word"),L("root"),"3","p","pretérito perfeito");
+    }
+
+    else if(L("index") == 22) {
+        AddWordIrregPredef(L("word"),L("root"),"1","s","pretérito mais-que-perfeito");
+    }
+    else if(L("index") == 23) {
+        AddWordIrregPredef(L("word"),L("root"),"2","s","pretérito mais-que-perfeito");
+    }
+    else if(L("index") == 24) {
+        AddWordIrregPredef(L("word"),L("root"),"3","s","pretérito mais-que-perfeito");
+    }
+    else if(L("index") == 25) {
+        AddWordIrregPredef(L("word"),L("root"),"1","p","pretérito mais-que-perfeito");
+    }
+    else if(L("index") == 26) {
+        AddWordIrregPredef(L("word"),L("root"),"2","p","pretérito mais-que-perfeito");
+    }
+    else if(L("index") == 27) {
+        AddWordIrregPredef(L("word"),L("root"),"3","p","pretérito mais-que-perfeito");
+    }
+    
+    else if(L("index") == 28) {
+        AddWordIrregPredef(L("word"),L("root"),"1","s","futuro do presente");
+    }
+    else if(L("index") == 29) {
+        AddWordIrregPredef(L("word"),L("root"),"2","s","futuro do presente");
+    }
+    else if(L("index") == 30) {
+        AddWordIrregPredef(L("word"),L("root"),"3","s","futuro do presente");
+    }
+    else if(L("index") == 31) {
+        AddWordIrregPredef(L("word"),L("root"),"1","p","futuro do presente");
+    }
+    else if(L("index") == 32) {
+        AddWordIrregPredef(L("word"),L("root"),"2","p","futuro do presente");
+    }
+    else if(L("index") == 33) {
+        AddWordIrregPredef(L("word"),L("root"),"3","p","futuro do presente");
+    }
+
+    else if(L("index") == 34) {
+        AddWordIrregPredef(L("word"),L("root"),"1","s","futuro do pretérito");
+    }
+    else if(L("index") == 35) {
+        AddWordIrregPredef(L("word"),L("root"),"2","s","futuro do pretérito");
+    }
+    else if(L("index") == 36) {
+        AddWordIrregPredef(L("word"),L("root"),"3","s","futuro do pretérito");
+    }
+    else if(L("index") == 37) {
+        AddWordIrregPredef(L("word"),L("root"),"1","p","futuro do pretérito");
+    }
+    else if(L("index") == 38) {
+        AddWordIrregPredef(L("word"),L("root"),"2","p","futuro do pretérito");
+    }
+    else if(L("index") == 39) {
+        AddWordIrregPredef(L("word"),L("root"),"3","p","futuro do pretérito");
+    }
+
+    else if(L("index") == 40) {
+        AddWordIrregPredef(L("word"),L("root"),"1","s","presente de subjuntivo");
+    }
+    else if(L("index") == 41) {
+        AddWordIrregPredef(L("word"),L("root"),"2","s","presente de subjuntivo");
+    }
+    else if(L("index") == 42) {
+        AddWordIrregPredef(L("word"),L("root"),"3","s","presente de subjuntivo");
+    }
+    else if(L("index") == 43) {
+        AddWordIrregPredef(L("word"),L("root"),"1","p","presente de subjuntivo");
+    }
+    else if(L("index") == 44) {
+        AddWordIrregPredef(L("word"),L("root"),"2","p","presente de subjuntivo");
+    }
+    else if(L("index") == 45) {
+        AddWordIrregPredef(L("word"),L("root"),"3","p","presente de subjuntivo");
+    }
+
+    else if(L("index") == 46) {
+        AddWordIrregPredef(L("word"),L("root"),"1","s","pretérito imperfeito de subjuntivo");
+    }
+    else if(L("index") == 47) {
+        AddWordIrregPredef(L("word"),L("root"),"2","s","pretérito imperfeito de subjuntivo");
+    }
+    else if(L("index") == 48) {
+        AddWordIrregPredef(L("word"),L("root"),"3","s","pretérito imperfeito de subjuntivo");
+    }
+    else if(L("index") == 49) {
+        AddWordIrregPredef(L("word"),L("root"),"1","p","pretérito imperfeito de subjuntivo");
+    }
+    else if(L("index") == 50) {
+        AddWordIrregPredef(L("word"),L("root"),"2","p","pretérito imperfeito de subjuntivo");
+    }
+    else if(L("index") == 51) {
+        AddWordIrregPredef(L("word"),L("root"),"3","p","pretérito imperfeito de subjuntivo");
+    }
+    
+    if(L("index") == 52) {
+        AddWordIrregPredef(L("word"),L("root"),"1","s","futuro de subjuntivo");
+    }
+    else if(L("index") == 53) {
+        AddWordIrregPredef(L("word"),L("root"),"2","s","futuro de subjuntivo");
+    }
+    else if(L("index") == 54) {
+        AddWordIrregPredef(L("word"),L("root"),"3","s","futuro de subjuntivo");
+    }
+    else if(L("index") == 55) {
+        AddWordIrregPredef(L("word"),L("root"),"1","p","futuro de subjuntivo");
+    }
+    else if(L("index") == 56) {
+        AddWordIrregPredef(L("word"),L("root"),"2","p","futuro de subjuntivo");
+    }
+    else if(L("index") == 57) {
+        AddWordIrregPredef(L("word"),L("root"),"3","p","futuro de subjuntivo");
+    }
+}
+
 AddWord(L("word"),L("lang"),L("node")) {
     L("header") = strtolower(pnvar(L("node"),"header"));
     L("pos") = PosStr(L("header"));
@@ -284,6 +474,17 @@ StemSuffix(L("stem"),L("suffix")) {
 AddConjugation(L("stem"),L("suffix"),L("pessoa"),L("numero"),L("tempo")) {
     L("root") = StemSuffix(L("stem"),"ar");
     L("word") = StemSuffix(L("stem"),L("suffix"));
+    L("con") = AddUniqueCon(G("words"),L("word"));
+    L("meaning") = MakeCountCon(L("con"),"meaning");
+    AddUniqueStr(L("meaning"),"pos","v");
+    AddUniqueStr(L("meaning"),"lang","pt");
+    AddUniqueStr(L("meaning"),"root",L("root"));
+    AddUniqueStr(L("meaning"),"pessoa",L("pessoa"));
+    AddUniqueStr(L("meaning"),"numero",L("numero"));
+    AddUniqueStr(L("meaning"),"tempo",L("tempo"));
+}
+
+AddWordIrregPredef(L("word"),L("root"),L("pessoa"),L("numero"),L("tempo")) {
     L("con") = AddUniqueCon(G("words"),L("word"));
     L("meaning") = MakeCountCon(L("con"),"meaning");
     AddUniqueStr(L("meaning"),"pos","v");

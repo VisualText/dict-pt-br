@@ -8,13 +8,24 @@
 
 @PATH _ROOT _textZone _languageZone _headerZone
 
+@PRE
+<1,1> vareq("header","Conjugação");
+
 @POST
-L("header") = strtolower(X("header",4));
+L("header") = strtolower(N("header",1));
 L("lang") = strtolower(X("language",3));
+L("type") = strtolower(N("conjug_type",1));
+"verb_type.txt" << L("type") << "\n";
 "build.txt" << L("header") << "\n";
+"meta.txt" << "header: " << L("header") << " verb_type: " << L("type") << "\n";
 if (L("lang") == "pt") {
-	if (L("header") == "verbo") {
-		AddVerbInf(X("word",1),L("lang"),N(1));
+if (L("header") == "conjugação") {
+		if(L("type") == "regular"){
+			AddVerbInf(X("word",1),L("lang"),N(1));
+		}
+		else {
+			AddVerbIrreg(X("word",1),L("lang"),N(1));
+		}
 	}
 }
 

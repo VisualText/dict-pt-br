@@ -1,5 +1,5 @@
 ###############################################
-# FILE: conjugationsIrreg
+# FILE: irregular_conjug
 # SUBJ: comment
 # AUTH: Eduardo Costa
 # CREATED: 2024-1-19 20:24:40
@@ -9,18 +9,16 @@
 @PATH _ROOT _textZone _headerZone _headerZone _conjugZone _LINE
 
 @POST
-# X("verb",4) = S()
-# G("verb_form_cnt") = getconcept(findroot(),"irreg_verb_form");
 G("verb_form_cnt") = ++G("verb_form_cnt");
-# IncrementCount(G("verb_form"),"count");
 
-L("c") = G("verb_form_cnt");
-L("v") = strclean(N("$text",2) + " " + N("$text",4));
+L("form_cnt") = G("verb_form_cnt");
+L("verb_form") = strclean(N("$text",2) + " " + N("$text",4));
 
-G("verb_form")[L("c")] = L("v");
-X("w",4) = G("verb_form");
+G("verb_form")[L("form_cnt")] = L("verb_form");
+X("conjug_type",4) = "irregular";
+X("verb_form_array",4) = G("verb_form");
 
-"irreg.txt" << L("v") << " Form: " << L("c") << "\n";
+"irreg.txt" << L("verb_form") << " Form: " << L("form_cnt") << "\n";
 
 single();
 
