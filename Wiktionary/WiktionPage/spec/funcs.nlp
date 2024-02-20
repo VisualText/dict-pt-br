@@ -41,15 +41,6 @@ AddVerbInf(L("word"),L("lang"),L("node")) {
 # verbs in portuguese: 
 # https://pt.wiktionary.org/wiki/Predefini%C3%A7%C3%A3o:conj.pt
 # ************************************************************
-AddVerbIrreg(L("root"),L("lang"),L("node")) {
-    L("index") = 4;
-    L("max_forms") = 57;
-    L("forms") = pnvar(L("node"),"verb_form_array");
-    while(L("index") <= L("max_forms")) {
-        AddConjugationIrreg(L("forms")[L("index")],L("root"),L("index"));
-        ++L("index");
-    }
-}
 
 AddConjugationIrreg(L("word"),L("root"),L("index")) {
 
