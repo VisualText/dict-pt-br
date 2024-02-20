@@ -9,55 +9,20 @@
 @PATH _ROOT _textZone _headerZone _headerZone _conjugZone _LINE
 
 @POST
-G("verb_form_cnt") = ++G("verb_form_cnt");
+# Increment the counter to control the verbal forms
+++G("verb_form_cnt");
 
-L("form_cnt") = G("verb_form_cnt");
+# Clean the verbal form
 L("verb_form") = strclean(N("$text",2) + " " + N("$text",4));
 
-G("verb_form")[L("form_cnt")] = L("verb_form");
-X("conjug_type",4) = "irregular";
-X("verb_form_array",4) = G("verb_form");
-
-"irreg.txt" << L("verb_form") << " Form: " << L("form_cnt") << "\n";
-
+# Call the function to add to the knowledge base
+AddConjugationIrreg(L("verb_form"),X("word",1),G("verb_form_cnt"));
 single();
 
 @RULES
 _formIrregVerb <-
-    \|		### (1)
-    não	[opt]### (2)
-    _xWHITE [opt]
-    _xALPHA 
+    \|             ### (1)
+    não	[opt]      ### (2)
+    _xWHITE [opt]  ### (3)
+    _xALPHA        ### (4)
     @@
-
-# @RULES
-# _conjugIrreg <-
-# 	_xWILD [match=(\{)]	### (1)
-# 	conj				### (2)
-# 	\.					### (3)
-# 	pt					### (4)
-# 	_formIrregVerb	[max=73]	### (5)
-# 	_xWILD [match=(\})]	### (6)
-# 	@@
-
-# 	# @POST
-# # "irregverb.txt" << _formIrregVerb
-
-# @RULES
-# _formIrregVerb <-
-#     \|		### (1)
-#     _xALPHA	### (2)
-#     _xWHITE [opt]
-#     _xALPHA [opt]
-#     @@
-
-# @RULES
-# _conjugIrreg <-
-#     _xWILD [match=(\{)]	### (1)
-#     conj				### (2)
-#     \.					### (3)
-#     pt					### (4)
-#     _formIrregVerb	[max=73]	### (5)
-#     _xWILD [match=(\})]	### (6)
-#     @@
-        
