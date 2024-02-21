@@ -1,0 +1,28 @@
+###############################################
+# FILE: irregular_conjug
+# SUBJ: comment
+# AUTH: Eduardo Costa
+# CREATED: 2024-1-19 20:24:40
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _textZone _headerZone _headerZone _conjugZone _LINE
+
+@POST
+# Increment the counter to control the verbal forms
+++G("verb_form_cnt");
+
+# Clean the verbal form
+L("verb_form") = strclean(N("$text",2) + " " + N("$text",4));
+
+# Call the function to add to the knowledge base
+AddConjugationIrreg(L("verb_form"),X("word",1),G("verb_form_cnt"));
+single();
+
+@RULES
+_formIrregVerb <-
+    \|             ### (1)
+    não	[opt]      ### (2)
+    _xWHITE [opt]  ### (3)
+    _xALPHA        ### (4)
+    @@

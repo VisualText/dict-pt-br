@@ -14,5 +14,6 @@ G("debug") = openfile(L("debugpath"),"app");
 G("words") = getconcept(findroot(),"words");
 G("stats") = getconcept(findroot(),"stats");
 G("conjugations") = getconcept(findroot(),"conjugations");
+# G("verb_form_cnt") = 0;
 
 @@CODE

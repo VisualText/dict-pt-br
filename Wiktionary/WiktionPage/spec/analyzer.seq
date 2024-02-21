@@ -21,7 +21,9 @@ nlp	headerZones4	# comment
 nlp	headerZones3	# comment
 nlp	headerZones2	# comment
 nlp	attributes	# comment
-nlp	conjugations	# comment
+nlp	conjugationZone	# comment
+nlp	regular_conjug	# comment
+nlp	irregular_conjug	# comment
 nlp	languageZone	# comment
 nlp	kbBuild	# comment
 nlp	kbBuild2	# comment

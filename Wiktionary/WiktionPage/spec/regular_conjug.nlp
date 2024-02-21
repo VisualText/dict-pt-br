@@ -1,16 +1,17 @@
 ###############################################
-# FILE: hasMeaning
+# FILE: regular_conjug
 # SUBJ: comment
 # AUTH: David de Hilster
 # CREATED: 2022-11-7 15:39:40
 # MODIFIED:
 ###############################################
 
-@PATH _ROOT _textZone _headerZone _headerZone _LINE
+@PATH _ROOT _textZone _headerZone _headerZone _conjugZone _LINE
 
 @POST
 X("stem",4) = N("$text",6);
 X("verb",4) = N("$text",8);
+X("conjug_type",4) = "regular";
 IncrementCount(G("conjugations"),"count");
 AddUniqueCon(G("conjugations"),N("$text",8));
 single();
