@@ -27,6 +27,7 @@ The 2000 verbs have been parsed into txt files which are located in diction/inpu
 | Abbreviation      | Meaning  |
 | :---------------- | :------  |
 | p              | Presente   |
+| i              | Imparativo   |
 | pi        | Pretérito Imperfeito   |
 | pp          | Pretérito Perfeito   |
 | pmp       | Pretérito Mais-que-perfeito   |
